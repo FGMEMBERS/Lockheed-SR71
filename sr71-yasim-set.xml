@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<PropertyList include="sr71-base.xml">
+
+ <sim>
+
+  <description>Lockheed SR 71 Blackbird (YASim)</description>
+  <flight-model>yasim</flight-model>
+  <aero>sr71-yasim</aero>
+
+ </sim>
+
+ <yasim>
+   <alphajet>
+     <pilot-lb>128</pilot-lb>
+   </alphajet>
+ </yasim>
+
+</PropertyList>
+
