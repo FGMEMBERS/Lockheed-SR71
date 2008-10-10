@@ -4,36 +4,17 @@
 
   <path>sr71.ac</path>
 
-  <!-- Le pilote -->
-  <animation>
-    <name>pilote</name>
-    <object-name>L-Boot</object-name>
-    <object-name>R-Boot</object-name>
-    <object-name>L-leg</object-name>
-    <object-name>R-leg</object-name>
-    <object-name>L-thigh</object-name>
-    <object-name>R-tigh</object-name>
-    <object-name>L-arm1</object-name>
-    <object-name>R-arm1</object-name>
-    <object-name>L-arm2</object-name>
-    <object-name>R-arm2</object-name>
-    <object-name>L-wrist</object-name>
-    <object-name>R-wrist</object-name>
-    <object-name>hand</object-name>
-    <object-name>hand.001</object-name>
-    <object-name>thumb</object-name>
-    <object-name>thumb.001</object-name>
-    <object-name>chest</object-name>
-    <object-name>L-life-jacket</object-name>
-    <object-name>L-mask-tube</object-name>
-    <object-name>L-collar</object-name>
-    <object-name>L-face-mask</object-name>
-    <object-name>L-head</object-name>
-    <object-name>L-helmet</object-name>
-    <object-name>L-visor</object-name>
-  </animation>
+  <nasal>
+    <load>
+      var livery_update = aircraft.livery_update.new("Aircraft/Lockheed-SR71/Models/Liveries", 10);
+    </load>
+    <unload>
+      livery_update.stop();
+    </unload>
+  </nasal>
 
   <animation>
+    <!-- Objets opaques -->
     <object-name>fuselage</object-name>
     <object-name>interieur</object-name>
     <object-name>cockpit</object-name>
@@ -73,25 +54,8 @@
     <object-name>porteD1</object-name>
     <object-name>accrocheD</object-name>
     <object-name>porteD2</object-name>
-    <object-name>CPT-C-Stick</object-name>
-
-    <!-- Le fauteuil -->
-    <object-name>CPT-Seat.003</object-name>
-    <object-name>CPT-Seat.004</object-name>
-    <object-name>box.003</object-name>
-    <object-name>box.004</object-name>
-    <object-name>box.005</object-name>
-    <object-name>sides.001</object-name>
 
     <!-- Objets transparents -->
-    <object-name>bruleG</object-name>
-    <object-name>bruleD</object-name>
-    <object-name>flammeD1</object-name>
-    <object-name>flammeD2</object-name>
-    <object-name>flammeD3</object-name>
-    <object-name>flammeG1</object-name>
-    <object-name>flammeG2</object-name>
-    <object-name>flammeG3</object-name>
     <object-name>vitre</object-name>
     <object-name>vitre0</object-name>
     <object-name>parachute</object-name>
@@ -99,44 +63,128 @@
 
   <animation>
     <type>noshadow</type>
-    <object-name>bruleG</object-name>
-    <object-name>bruleD</object-name>
-    <object-name>flammeG1</object-name>
-    <object-name>flammeD1</object-name>
-    <object-name>flammeG2</object-name>
-    <object-name>flammeD2</object-name>
-    <object-name>flammeG3</object-name>
-    <object-name>flammeD3</object-name>
+    <object-name>vitre</object-name>
+    <object-name>vitre0</object-name>
     <object-name>parachute</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>fuselage</object-name>
+    <object-name>interieur</object-name>
+    <object-name>cockpit</object-name>
+    <object-name>porteparaG</object-name>
+    <object-name>porteparaD</object-name>
+    <object-name>moteur</object-name>
+    <object-name>cone</object-name>
+    <object-name>nez</object-name>
+    <object-name>derive</object-name>
+    <object-name>directionG</object-name>
+    <object-name>directionD</object-name>
+    <object-name>aileronG</object-name>
+    <object-name>aileronD</object-name>
+    <object-name>profondeurG</object-name>
+    <object-name>profondeurD</object-name>
+    <object-name>roueA</object-name>
+    <object-name>axeA</object-name>
+    <object-name>verrinA</object-name>
+    <object-name>barrehautA</object-name>
+    <object-name>barrebasA</object-name>
+    <object-name>porteAG</object-name>
+    <object-name>porteAD</object-name>
+    <object-name>porteAR</object-name>
+    <object-name>roueG</object-name>
+    <object-name>axeG</object-name>
+    <object-name>verrinG</object-name>
+    <object-name>barrehautG</object-name>
+    <object-name>barrebasG</object-name>
+    <object-name>porteG1</object-name>
+    <object-name>accrocheG</object-name>
+    <object-name>porteG2</object-name>
+    <object-name>roueD</object-name>
+    <object-name>axeD</object-name>
+    <object-name>verrinD</object-name>
+    <object-name>barrehautD</object-name>
+    <object-name>barrebasD</object-name>
+    <object-name>porteD1</object-name>
+    <object-name>accrocheD</object-name>
+    <object-name>porteD2</object-name>
+
+    <property-base>sim/model/livery</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>texture.png</texture>
+<!--
+    <diffuse>
+      <red-prop>diffuse/red</red-prop>
+      <green-prop>diffuse/green</green-prop>
+      <blue-prop>diffuse/blue</blue-prop>
+    </diffuse>
+
+    <ambient>
+      <red-prop>ambient/red</red-prop>
+      <green-prop>ambient/green</green-prop>
+      <blue-prop>ambient/blue</blue-prop>
+    </ambient>
+-->
+    <specular>
+      <red-prop>specular/red</red-prop>
+      <green-prop>specular/green</green-prop>
+      <blue-prop>specular/blue</blue-prop>
+    </specular>
+
+    <emission>
+      <red-prop>emission/red</red-prop>
+      <green-prop>emission/green</green-prop>
+      <blue-prop>emission/blue</blue-prop>
+    </emission>
+<!--
+    <shininess>
+      <shininess-prop>shininess</shininess-prop>
+    </shininess>
+-->
   </animation>
 
   <!-- Planches de bord -->
   <model>
-    <path>Aircraft/Lockheed-SR71/Models/Panel/panel.xml</path>
+    <path>Aircraft/Lockheed-SR71/Models/Interior/interior.xml</path>
     <offsets>
-      <x-m> -10.706 </x-m>
-      <y-m>   0.000 </y-m>
-      <z-m>  -0.768 </z-m>
+      <x-m> 0.0 </x-m>
+      <y-m> 0.0 </y-m>
+      <z-m> 0.0 </z-m>
     </offsets>
   </model>
 
-  <!-- Pilote invisible depuis le cockpit -->
-  <animation>
-    <type>select</type>
-    <object-name>pilote</object-name>
-    <condition>
-      <greater-than>
-        <property>sim/current-view/view-number</property>
-        <value>0</value>
-      </greater-than>
-    </condition>
-  </animation>
+  <!-- Les flammes -->
+  <!-- Gauche -->
+  <model>
+    <path>Aircraft/Lockheed-SR71/Models/Effects/flammesG.xml</path>
+    <offsets>
+      <x-m> 15.387 </x-m>
+      <y-m> -4.205 </y-m>
+      <z-m> -0.305 </z-m>
+    </offsets>
+  </model>
+
+ <!-- Droite -->
+  <model>
+    <path>Aircraft/Lockheed-SR71/Models/Effects/flammesD.xml</path>
+    <offsets>
+      <x-m> 15.387 </x-m>
+      <y-m>  4.205 </y-m>
+      <z-m> -0.305 </z-m>
+    </offsets>
+  </model>
 
   <!-- Canopy -->
   <animation>
-    <type>rotate</type>
+    <name>Canopy</name>
     <object-name>cockpit</object-name>
     <object-name>vitre0</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Canopy</object-name>
     <property>instrumentation/doors/crew/position-norm</property>
     <interpolation>
       <entry>
@@ -368,15 +416,19 @@
     </axis>
   </animation>
 
-
   <!-- Rentrée des roues -->
   <animation>
-    <type>rotate</type>
+    <name>RentreA</name>
     <object-name>roueA</object-name>
     <object-name>axeA</object-name>
     <object-name>verrinA</object-name>
     <object-name>barrehautA</object-name>
     <object-name>barrebasA</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>RentreA</object-name>
     <property>gear/gear[0]/position-norm</property>
     <interpolation>
       <entry>
@@ -401,12 +453,17 @@
   </animation>
 
   <animation>
-    <type>rotate</type>
+    <name>RentreG</name>
     <object-name>roueG</object-name>
     <object-name>axeG</object-name>
     <object-name>verrinG</object-name>
     <object-name>barrehautG</object-name>
     <object-name>barrebasG</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>RentreG</object-name>
     <property>gear/gear[1]/position-norm</property>
     <interpolation>
       <entry>
@@ -435,12 +492,17 @@
   </animation>
 
   <animation>
-    <type>rotate</type>
+    <name>RentreD</name>
     <object-name>roueD</object-name>
     <object-name>axeD</object-name>
     <object-name>verrinD</object-name>
     <object-name>barrehautD</object-name>
     <object-name>barrebasD</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>RentreD</object-name>
     <property>gear/gear[2]/position-norm</property>
     <interpolation>
       <entry>
@@ -552,9 +614,14 @@
   </animation>
 
   <animation>
-    <type>rotate</type>
+    <name>PG1</name>
     <object-name>porteG1</object-name>
     <object-name>accrocheG</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>PG1</object-name>
     <property>gear/gear[1]/position-norm</property>
     <interpolation>
       <entry>
@@ -643,9 +710,14 @@
   </animation>
 
   <animation>
-    <type>rotate</type>
+    <name>PD1</name>
     <object-name>porteD1</object-name>
     <object-name>accrocheD</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>PD1</object-name>
     <property>gear/gear[2]/position-norm</property>
     <interpolation>
       <entry>
@@ -735,10 +807,15 @@
 
   <!-- Compression -->
   <animation>
-    <type>translate</type>
+    <name>ToutA</name>
     <object-name>roueA</object-name>
     <object-name>axeA</object-name>
     <object-name>barrebasA</object-name>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>ToutA</object-name>
     <property>gear/gear[0]/compression-norm</property>
     <interpolation>
       <entry>
@@ -810,10 +887,15 @@
   </animation>
 
   <animation>
-    <type>translate</type>
+    <name>ToutG</name>
     <object-name>roueG</object-name>
     <object-name>axeG</object-name>
     <object-name>barrebasG</object-name>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>ToutG</object-name>
     <property>gear/gear[1]/compression-norm</property>
     <interpolation>
       <entry>
@@ -885,10 +967,15 @@
   </animation>
 
   <animation>
-    <type>translate</type>
+    <name>ToutD</name>
     <object-name>roueD</object-name>
     <object-name>axeD</object-name>
     <object-name>barrebasD</object-name>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>ToutD</object-name>
     <property>gear/gear[2]/compression-norm</property>
     <interpolation>
       <entry>
@@ -961,18 +1048,23 @@
 
   <!-- Rotation de la roue avant en fonction de la gouverne de direction -->
   <animation>
-    <type>rotate</type>
+    <name>EnsembleAvant</name>
     <object-name>roueA</object-name>
     <object-name>axeA</object-name>
     <object-name>verrinA</object-name>
     <object-name>barrehautA</object-name>
     <object-name>barrebasA</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>EnsembleAvant</object-name>
     <property>controls/flight/rudder</property>
     <factor>  20.0 </factor>
     <center>
       <x-m> -5.846 </x-m>
       <y-m>  0.000 </y-m>
-      <z-m> -2.606 </z-m>
+      <z-m> -2.702 </z-m>
     </center>
     <axis>
       <x>  0.000 </x>
@@ -990,7 +1082,7 @@
     <center>
       <x-m> -5.846 </x-m>
       <y-m>  0.000 </y-m>
-      <z-m> -2.606 </z-m>
+      <z-m> -2.702 </z-m>
     </center>
     <axis>
       <x>  0.000 </x>
@@ -1033,114 +1125,9 @@
     </axis>
   </animation>
 
- <!-- Animation des flammes des réacteurs -->
- <animation>
-   <type>select</type>
-   <object-name>bruleG</object-name>
-   <condition>
-     <greater-than>
-       <property>controls/engines/engine[0]/throttle</property>
-       <value>0.7</value>
-     </greater-than>
-   </condition>
- </animation>
-
- <animation>
-   <type>select</type>
-   <object-name>flammeG1</object-name>
-   <condition>
-     <greater-than>
-       <property>controls/engines/engine[0]/throttle</property>
-       <value>0.8</value>
-     </greater-than>
-     <less-than>
-       <property>controls/engines/engine[0]/throttle</property>
-       <value>0.9</value>
-     </less-than>
-   </condition>
- </animation>
-
- <animation>
-   <type>select</type>
-   <object-name>flammeG2</object-name>
-   <condition>
-     <greater-than>
-       <property>controls/engines/engine[0]/throttle</property>
-       <value>0.9</value>
-     </greater-than>
-     <less-than>
-       <property>controls/engines/engine[0]/throttle</property>
-       <value>1</value>
-     </less-than>
-   </condition>
- </animation>
-
- <animation>
-   <type>select</type>
-   <object-name>flammeG3</object-name>
-   <condition>
-     <equals>
-       <property>controls/engines/engine[0]/throttle</property>
-       <value>1</value>
-     </equals>
-   </condition>
- </animation>
-
- <animation>
-   <type>select</type>
-   <object-name>bruleD</object-name>
-   <condition>
-     <greater-than>
-       <property>controls/engines/engine[1]/throttle</property>
-       <value>0.7</value>
-     </greater-than>
-   </condition>
- </animation>
-
-  <animation>
-    <type>select</type>
-    <object-name>flammeD1</object-name>
-    <condition>
-      <greater-than>
-        <property>controls/engines/engine[1]/throttle</property>
-        <value>0.8</value>
-      </greater-than>
-      <less-than>
-        <property>controls/engines/engine[1]/throttle</property>
-        <value>0.9</value>
-      </less-than>
-    </condition>
-  </animation>
-
-  <animation>
-    <type>select</type>
-    <object-name>flammeD2</object-name>
-    <condition>
-      <greater-than>
-        <property>controls/engines/engine[1]/throttle</property>
-        <value>0.9</value>
-      </greater-than>
-      <less-than>
-        <property>controls/engines/engine[1]/throttle</property>
-        <value>1</value>
-      </less-than>
-    </condition>
-  </animation>
-
-  <animation>
-    <type>select</type>
-    <object-name>flammeD3</object-name>
-    <condition>
-      <equals>
-        <property>controls/engines/engine[1]/throttle</property>
-        <value>1</value>
-      </equals>
-    </condition>
-  </animation>
-
   <!-- Lampes clignotantes -->
   <model>
-    <path>Aircraft/Lockheed-SR71/Models/StrobeLight.xml</path>
+    <path>Aircraft/Lockheed-SR71/Models/lights/beacon.xml</path>
     <offsets>
       <x-m> -4.700 </x-m>
       <y-m> -0.145 </y-m>
@@ -1149,11 +1136,11 @@
   </model>
 
   <model>
-    <path>Aircraft/Lockheed-SR71/Models/StrobeLight.xml</path>
+    <path>Aircraft/Lockheed-SR71/Models/lights/RedLight.xml</path>
     <offsets>
       <x-m> -4.700 </x-m>
       <y-m> -0.145 </y-m>
-      <z-m> -1.360 </z-m>
+      <z-m> -1.432 </z-m>
     </offsets>
   </model>
 

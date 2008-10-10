@@ -1,4 +1,4 @@
-English/FranÃ§ais
+English/Français
 
 [English]
 ----------
@@ -38,7 +38,7 @@ http://helijah.free.fr/flightgear/hangar.htm
 embaranger@free.fr
 
 
-[FranÃ§ais]
+[Français]
 ----------
 
 Un peu d'histoire
@@ -49,14 +49,14 @@ SR 71 Blackbird
 
 Constructeur                  : Lockheed
 Type                          :
-AnnÃ©e                         :
+Année                         :
 Moteur                        :
 Envergure                     :
 Longueur                      :
 Hauteur                       :
-Poids estimÃ© au dÃ©collage     :
-Vitesse estimÃ©e de croisiÃ¨re  :
-Autonomie estimÃ©e             :
+Poids estimé au décollage     :
+Vitesse estimée de croisière  :
+Autonomie estimée             :
 Equipage                      :
 
 

@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <path>panel.ac</path>
+
+  <animation>
+    <object-name>panel</object-name>
+  </animation>
+
+
+  <model>
+    <path>Aircraft/Lockheed-SR71/Models/Interior/Panel/Instruments/mag-compass/mag-compass.xml</path>
+    <offsets>
+      <x-m> -0.262 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.689 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Lockheed-SR71/Models/Interior/Panel/Instruments/hsi/hsi.xml</path>
+    <offsets>
+      <x-m> -0.199 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.257 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Lockheed-SR71/Models/Interior/Panel/Instruments/clock/clock.xml</path>
+    <offsets>
+      <x-m> -0.196 </x-m>
+      <y-m> -0.359 </y-m>
+      <z-m>  0.401 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Lockheed-SR71/Models/Interior/Panel/Instruments/mach/mach.xml</path>
+    <offsets>
+      <x-m> -0.196 </x-m>
+      <y-m> -0.113 </y-m>
+      <z-m>  0.380 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Lockheed-SR71/Models/Interior/Panel/Instruments/altimeter/altimeter.xml</path>
+    <offsets>
+      <x-m> -0.197 </x-m>
+      <y-m>  0.110 </y-m>
+      <z-m>  0.278 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Lockheed-SR71/Models/Interior/Panel/Instruments/ai/ai.xml</path>
+    <offsets>
+      <x-m> -0.182 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.380 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Lockheed-SR71/Models/Interior/Panel/Instruments/speed/speed.xml</path>
+    <offsets>
+      <x-m> -0.198 </x-m>
+      <y-m>  0.107 </y-m>
+      <z-m>  0.378 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Lockheed-SR71/Models/Interior/Panel/Instruments/radar/radar.xml</path>
+    <offsets>
+      <x-m> -0.191 </x-m>
+      <y-m>  0.010 </y-m>
+      <z-m>  0.100 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Lockheed-SR71/Models/Interior/Panel/Instruments/rpm/rpm1.xml</path>
+    <offsets>
+      <x-m> -0.194 </x-m>
+      <y-m>  0.216 </y-m>
+      <z-m>  0.378 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Lockheed-SR71/Models/Interior/Panel/Instruments/rpm/rpm2.xml</path>
+    <offsets>
+      <x-m> -0.194 </x-m>
+      <y-m>  0.297 </y-m>
+      <z-m>  0.378 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Lockheed-SR71/Models/Interior/Panel/Instruments/egt/egt1.xml</path>
+    <offsets>
+      <x-m> -0.194 </x-m>
+      <y-m>  0.216 </y-m>
+      <z-m>  0.297 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Lockheed-SR71/Models/Interior/Panel/Instruments/egt/egt2.xml</path>
+    <offsets>
+      <x-m> -0.194 </x-m>
+      <y-m>  0.297 </y-m>
+      <z-m>  0.297 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Lockheed-SR71/Models/Interior/Panel/Instruments/oilpressure/oilpressure1.xml</path>
+    <offsets>
+      <x-m> -0.194 </x-m>
+      <y-m>  0.216 </y-m>
+      <z-m>  0.220 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Lockheed-SR71/Models/Interior/Panel/Instruments/oilpressure/oilpressure2.xml</path>
+    <offsets>
+      <x-m> -0.194 </x-m>
+      <y-m>  0.297 </y-m>
+      <z-m>  0.220 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Lockheed-SR71/Models/Interior/Panel/Instruments/oiltemp/oiltemp1.xml</path>
+    <offsets>
+      <x-m> -0.194 </x-m>
+      <y-m>  0.216 </y-m>
+      <z-m>  0.144 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Lockheed-SR71/Models/Interior/Panel/Instruments/oiltemp/oiltemp2.xml</path>
+    <offsets>
+      <x-m> -0.194 </x-m>
+      <y-m>  0.297 </y-m>
+      <z-m>  0.144 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>

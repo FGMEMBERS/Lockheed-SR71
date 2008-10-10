@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <path>interior.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>interieur</object-name>
+    <object-name>manche</object-name>
+
+    <!-- Le fauteuil -->
+    <object-name>CPT-Seat.003</object-name>
+    <object-name>CPT-Seat.004</object-name>
+    <object-name>box.003</object-name>
+    <object-name>box.004</object-name>
+    <object-name>box.005</object-name>
+    <object-name>sides.001</object-name>
+
+    <!-- Objets transparents -->
+  </animation>
+
+  <!-- Pilote -->
+  <model>
+    <name>Pilote</name>
+    <path>Aircraft/Lockheed-SR71/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -10.216 </x-m>
+      <y-m>   0.000 </y-m>
+      <z-m>  -0.687 </z-m>
+    </offsets>
+  </model> -->
+
+  <!-- Planches de bord -->
+  <model>
+    <path>Aircraft/Lockheed-SR71/Models/Interior/Panel/panel.xml</path>
+    <offsets>
+      <x-m> -10.706 </x-m>
+      <y-m>   0.000 </y-m>
+      <z-m>  -0.768 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>
+

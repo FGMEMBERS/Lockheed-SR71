@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+  <path>speed.ac</path>
+
+  <animation>
+    <type>material</type>
+    <object-name>Face</object-name>
+    <object-name>Needle1</object-name>
+    <emission>
+      <factor-prop>/controls/lighting/instruments-norm</factor-prop>
+      <red>   0.50 </red>
+      <green> 0.25 </green>
+      <blue>  0.25 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Needle1</object-name>
+    <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+    <interpolation>
+      <entry><ind>    0 </ind><dep>   0 </dep></entry>
+      <entry><ind>  200 </ind><dep>  25 </dep></entry>
+      <entry><ind>  400 </ind><dep>  77 </dep></entry>
+      <entry><ind>  600 </ind><dep> 129 </dep></entry>
+      <entry><ind>  800 </ind><dep> 180 </dep></entry>
+      <entry><ind> 1000 </ind><dep> 232 </dep></entry>
+      <entry><ind> 1200 </ind><dep> 283 </dep></entry>
+      <entry><ind> 1400 </ind><dep> 335 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>
+
+
