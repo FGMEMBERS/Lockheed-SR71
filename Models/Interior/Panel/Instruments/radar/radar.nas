@@ -1,19 +1,19 @@
 # =======================
 # Multiplayer Quirks
 # =======================
-MPjoin = func {
-   #print(cmdarg().getValue(), " added");
-   setprop("instrumentation/radar",cmdarg().getValue(),"radar/y-shift",0);
-   setprop("instrumentation/radar",cmdarg().getValue(),"radar/x-shift",0);
-   setprop("instrumentation/radar",cmdarg().getValue(),"radar/rotation",0);
-   setprop("instrumentation/radar",cmdarg().getValue(),"radar/in-range",0);
-   setprop("instrumentation/radar",cmdarg().getValue(),"radar/h-offset",180);
-   setprop("instrumentation/radar",cmdarg().getValue(),"joined",1);
+MPjoin = func(n) {
+   #print(n.getValue(), " added");
+   setprop("instrumentation/radar",n.getValue(),"radar/y-shift",0);
+   setprop("instrumentation/radar",n.getValue(),"radar/x-shift",0);
+   setprop("instrumentation/radar",n.getValue(),"radar/rotation",0);
+   setprop("instrumentation/radar",n.getValue(),"radar/in-range",0);
+   setprop("instrumentation/radar",n.getValue(),"radar/h-offset",180);
+   setprop("instrumentation/radar",n.getValue(),"joined",1);
 }
-MPleave= func {
-   #print(cmdarg().getValue(), " removed");
-   setprop("instrumentation/radar",cmdarg().getValue(),"radar/in-range",0);
-   setprop("instrumentation/radar",cmdarg().getValue(),"joined",0);
+MPleave= func(n) {
+   #print(n.getValue(), " removed");
+   setprop("instrumentation/radar",n.getValue(),"radar/in-range",0);
+   setprop("instrumentation/radar",n.getValue(),"joined",0);
 }
 
 
