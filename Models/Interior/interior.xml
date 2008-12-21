@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
@@ -29,7 +29,7 @@
       <y-m>   0.000 </y-m>
       <z-m>  -0.687 </z-m>
     </offsets>
-  </model> -->
+  </model>
 
   <!-- Planches de bord -->
   <model>
