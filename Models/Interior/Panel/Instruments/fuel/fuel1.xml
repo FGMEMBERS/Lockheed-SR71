@@ -9,7 +9,7 @@
   <animation>
   <type>rotate</type>
   <object-name>needle</object-name>
-  <property>consumables/fuel/tank[0]/level-lb</property>
+  <property>consumables/fuel/tank[0]/level-lbs</property>
   <factor>0.09</factor>
   <center>
    <x-m>0.02</x-m>
