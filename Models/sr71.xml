@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
@@ -56,14 +56,22 @@
     <object-name>porteD2</object-name>
 
     <!-- Objets transparents -->
-    <object-name>vitre</object-name>
+    <object-name>vitres</object-name>
     <object-name>vitre0</object-name>
     <object-name>parachute</object-name>
   </animation>
 
   <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>glass_shader.png</texture>
+    <object-name>vitres</object-name>
+    <object-name>vitre0</object-name>
+  </animation>
+
+  <animation>
     <type>noshadow</type>
-    <object-name>vitre</object-name>
+    <object-name>vitres</object-name>
     <object-name>vitre0</object-name>
     <object-name>parachute</object-name>
   </animation>
@@ -187,26 +195,11 @@
     <object-name>Canopy</object-name>
     <property>instrumentation/doors/crew/position-norm</property>
     <interpolation>
-      <entry>
-        <ind> 0.00 </ind>
-        <dep> 0.00 </dep>
-      </entry>
-      <entry>
-        <ind>  0.25 </ind>
-        <dep> 10.00 </dep>
-      </entry>
-      <entry>
-        <ind>  0.50 </ind>
-        <dep> 15.00 </dep>
-      </entry>
-      <entry>
-        <ind>  0.75 </ind>
-        <dep> 30.00 </dep>
-      </entry>
-      <entry>
-        <ind>  1.00 </ind>
-        <dep> 38.00 </dep>
-      </entry>
+      <entry><ind> 0.00 </ind><dep>  0 </dep></entry>
+      <entry><ind> 0.25 </ind><dep> 10 </dep></entry>
+      <entry><ind> 0.50 </ind><dep> 15 </dep></entry>
+      <entry><ind> 0.75 </ind><dep> 30 </dep></entry>
+      <entry><ind> 1.00 </ind><dep> 38 </dep></entry>
     </interpolation>
     <center>
       <x-m> -9.616 </x-m>

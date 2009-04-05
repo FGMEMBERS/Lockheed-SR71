@@ -18,6 +18,22 @@
     <object-name>sides.001</object-name>
 
     <!-- Objets transparents -->
+    <object-name>intvitres</object-name>
+    <object-name>intvitre0</object-name>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>shader.png</texture>
+    <object-name>intvitres</object-name>
+    <object-name>intvitre0</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>intvitres</object-name>
+    <object-name>intvitre0</object-name>
   </animation>
 
   <!-- Pilote -->
@@ -40,6 +56,30 @@
       <z-m>  -0.768 </z-m>
     </offsets>
   </model>
+
+  <!-- Canopy -->
+  <animation>
+    <type>rotate</type>
+    <object-name>intvitre0</object-name>
+    <property>instrumentation/doors/crew/position-norm</property>
+    <interpolation>
+      <entry><ind> 0.00 </ind><dep>  0 </dep></entry>
+      <entry><ind> 0.25 </ind><dep> 10 </dep></entry>
+      <entry><ind> 0.50 </ind><dep> 15 </dep></entry>
+      <entry><ind> 0.75 </ind><dep> 30 </dep></entry>
+      <entry><ind> 1.00 </ind><dep> 38 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -9.616 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.169 </z-m>
+    </center>
+    <axis>
+      <x>  0.00 </x>
+      <y>  1.00 </y>
+      <z>  0.00 </z>
+    </axis>
+  </animation>
 
 </PropertyList>
 

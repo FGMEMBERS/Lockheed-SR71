@@ -1,55 +1,60 @@
-<?xml version="1.0"?>
-
-<!-- F-80C fuel gauge, by Dave Culp -->
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
- <path>fuel.ac</path>
+  <path>fuel.ac</path>
 
   <animation>
-  <type>rotate</type>
-  <object-name>needle</object-name>
-  <property>consumables/fuel/tank[0]/level-lbs</property>
-  <factor>0.09</factor>
-  <center>
-   <x-m>0.02</x-m>
-   <y-m>0</y-m>
-   <z-m>0</z-m>
-  </center>
-  <axis>
-   <x>-1</x>
-   <y>0</y>
-   <z>0</z>
-  </axis>
- </animation>  
+    <object-name>fond</object-name>
+    <object-name>face</object-name>
+    <object-name>needle</object-name>
 
- <animation>
-  <type>material</type>
-  <object-name>face</object-name>
-   <emission>
-     <red>0.6</red>
-     <green>0.3</green>
-     <blue>0.3</blue>
-    <factor-prop>controls/lighting/instruments-norm</factor-prop>
-   </emission> 
- </animation>  
+    <object-name>vitre</object-name>
+  </animation>
 
- <animation>
-  <type>material</type>
-  <object-name>needle</object-name>
-   <emission>
-     <red>0.6</red>
-     <green>0.3</green>
-     <blue>0.3</blue>
-    <factor-prop>controls/lighting/instruments-norm</factor-prop>
-   </emission> 
- </animation>  
+  <animation>
+    <type>noshadow</type>
+    <object-name>vitre</object-name>
+  </animation>
 
- <!-- *** LoD *** -->
- <animation>
-  <type>range</type>
-  <min-m>0</min-m>
-  <max-m>5</max-m>
- </animation>
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>glass.png</texture>
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>face</object-name>
+    <object-name>needle</object-name>
+    <emission>
+      <red>   0.8 </red>
+      <green> 0.7 </green>
+      <blue>  0.5 </blue>
+      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>needle</object-name>
+    <property>/engines/engine[1]/fuel-flow-gph</property>
+    <interpolation>
+      <entry><ind>    0 </ind><dep>  90 </dep></entry>
+      <entry><ind>  200 </ind><dep> 230 </dep></entry>
+      <entry><ind> 1200 </ind><dep> 420 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> 0.02 </x-m>
+      <y-m> 0.00 </y-m>
+      <z-m> 0.00 </z-m>
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>  
 
 </PropertyList>
