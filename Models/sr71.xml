@@ -183,6 +183,33 @@
     </offsets>
   </model>
 
+  <!-- Particules OSG -->
+  <!-- Gauche -->
+  <model>
+    <path>Aircraft/ME-262HGIII/Models/effects/trailL.xml</path>
+    <offsets>
+      <x-m> 15.387 </x-m>
+      <y-m> -4.205 </y-m>
+      <z-m> -0.305 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Droite -->
+  <model>
+    <path>Aircraft/ME-262HGIII/Models/effects/trailR.xml</path>
+    <offsets>
+      <x-m> 15.387 </x-m>
+      <y-m>  4.205 </y-m>
+      <z-m> -0.305 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
   <!-- Canopy -->
   <animation>
     <name>Canopy</name>
