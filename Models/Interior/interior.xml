@@ -8,6 +8,8 @@
     <!-- Objets opaques -->
     <object-name>interieur</object-name>
     <object-name>manche</object-name>
+    <object-name>intcockpit</object-name>
+    <object-name>intcockpit2</object-name>
 
     <!-- Le fauteuil -->
     <object-name>CPT-Seat.003</object-name>
@@ -25,7 +27,7 @@
   <animation>
     <type>shader</type>
     <shader>chrome</shader>
-    <texture>shader.png</texture>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
     <object-name>intvitres</object-name>
     <object-name>intvitre0</object-name>
   </animation>
@@ -59,8 +61,14 @@
 
   <!-- Canopy -->
   <animation>
-    <type>rotate</type>
+    <name>IntCanopy</name>
+    <object-name>intcockpit</object-name>
     <object-name>intvitre0</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>IntCanopy</object-name>
     <property>instrumentation/doors/crew/position-norm</property>
     <interpolation>
       <entry><ind> 0.00 </ind><dep>  0 </dep></entry>
@@ -75,9 +83,9 @@
       <z-m>  0.169 </z-m>
     </center>
     <axis>
-      <x>  0.00 </x>
-      <y>  1.00 </y>
-      <z>  0.00 </z>
+      <x>  0 </x>
+      <y>  1 </y>
+      <z>  0 </z>
     </axis>
   </animation>
 

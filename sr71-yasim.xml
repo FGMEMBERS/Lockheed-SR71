@@ -1,66 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--  Lockheed SR 71 Blackbird yasim config.
 
-    Masse à vide : 30600 kg (67500 lb)
-    Vitesse max  : 3530 km/h (1906.05 kts) à 24000 m (80000 ft) -->
+<!-- Lockheed SR 71 Blackbird yasim config. 2010 BARANGER Emmanuel
 
+     sources         : http://en.wikipedia.org/wiki/SR-71_Blackbird
 
-<airplane mass="21700">
+     Wingspan        : 16.94 m    (   55 ft 7 in )
+     Lenght          : 32.74 m    (  107 ft 5 in )
+     Height          :  5.64 m    (   18 ft 6 in )
+     Empty mass      : 30600 kg   (67500 lb )
+     Max speed       :   513 km/h (  277 kt )
+     Engines         : 2 Pratt & Whitney J58-1 continuous-bleed afterburning turbojets (32500 lbf)
+-->
+<airplane mass="67500">
 
-  <approach speed="150" aoa="8" fuel="0.8">
+  <approach speed="100" aoa="9" fuel="0.3">
     <control-setting axis="/controls/engines/engine[0]/throttle" value="0.4"/>
     <control-setting axis="/controls/engines/engine[0]/afterburner" value="0.2"/>
     <control-setting axis="/controls/engines/engine[1]/throttle" value="0.4"/>
     <control-setting axis="/controls/engines/engine[1]/afterburner" value="0.2"/>
-    <control-setting axis="/controls/flight/spoilers" value="0.3"/>
     <control-setting axis="/controls/gear/gear-down" value="1"/>
   </approach>
 
-  <cruise speed="1100" alt="30000" fuel="0.8">
-    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.7"/>
-    <control-setting axis="/controls/engines/engine[0]/afterburner" value="0.7"/>
-    <control-setting axis="/controls/engines/engine[1]/throttle" value="0.7"/>
-    <control-setting axis="/controls/engines/engine[1]/afterburner" value="0.7"/>
-    <control-setting axis="/controls/flight/spoilers" value="0.0"/>
+  <cruise speed="1500" alt="40000" fuel="0.8">
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.8"/>
+    <control-setting axis="/controls/engines/engine[0]/afterburner" value="0.8"/>
+    <control-setting axis="/controls/engines/engine[1]/throttle" value="0.8"/>
+    <control-setting axis="/controls/engines/engine[1]/afterburner" value="0.8"/>
     <control-setting axis="/controls/gear/gear-down" value="0"/>
   </cruise>
 
   <cockpit x="10.142" y="0.0" z="-0.103"/>
 
-  <fuselage ax="16.367" ay="0.000" az="-1.077" bx="-16.933" by="0.000" bz="-0.286" width="3.738" taper="1" midpoint="0.5"/>
+  <fuselage ax="15.046" ay="0.000" az="-1.077" bx="-16.933" by="0.000" bz="-0.286" width="1.8" taper="0.37" midpoint="0.2"/>
 
-  <wing x="-1.468" y="1.290" z="-1.911"
-        length="10.901"
-        chord="4.229"
-        taper="0.36"
-        sweep="10"
-        camber="0.01">
-        <stall aoa="12" width="8" peak="1.5"/>
-        <flap1 start=".66" end=".96" lift="1.3" drag="1.1"/>
-        <slat start=".2" end=".8" aoa="20" drag="2.0"/>
-        <spoiler start=".02" end=".3" lift="1" drag="6.0"/>
+  <fuselage ax="-2.507" ay="4.205" az="-0.743" bx="-14.091" by="4.205" bz="-0.305" width="1.8" taper="0.8" midpoint="0.5"/>
+
+  <fuselage ax="-2.507" ay="-4.205" az="-0.743" bx="-14.091" by="-4.205" bz="-0.305" width="1.8" taper="0.8" midpoint="0.5"/>
+
+  <wing x="-6.594" y="0" z="-0.884"
+        chord="18.336"
+        length="10.8"
+        taper="0.1"
+        sweep="38"
+        dihedral="2"
+        camber="0.15">
+        <stall aoa="16" width="1" peak="1.5"/>
+        <flap1 start="0.66" end="1" lift="1.3" drag="1.2"/>
 
         <control-input axis="/controls/flight/aileron" control="FLAP1" split="true"/>
         <control-input axis="/controls/flight/aileron-trim" control="FLAP1" split="true"/>
-        <control-input axis="/controls/flight/flaps" control="SLAT"/>
-        <control-input axis="/controls/flight/speedbrake" control="SPOILER"/>
 
         <control-output control="FLAP1" side="left" prop="/surface-positions/left-aileron-pos-norm"/>
         <control-output control="FLAP1" side="right" prop="/surface-positions/right-aileron-pos-norm"/>
-        <control-output control="SLAT" prop="/surface-positions/slat-pos-norm"/>
-        <control-output control="SPOILER" prop="/surface-positions/spoiler-pos-norm"/>
-
-        <control-speed control="SPOILER" transition-time="1"/>
   </wing>
 
-  <hstab x="-11.010" y="0" z="3.319"
-         length="3.044"
-         chord="2.179"
-         taper="0.9"
-         sweep="35"
-         incidence="0.0">
-         <stall aoa="12" width="4" peak="1.5"/>
-         <flap0 start="0" end="1" lift="1.5" drag="1.1"/>
+  <hstab x="-6.594" y="0" z="-0.884"
+         chord="18.336"
+         length="10.8"
+         taper="0.1"
+         sweep="38"
+         dihedral="2"
+         camber="0.15">
+         <stall aoa="14" width="2" peak="1.8"/>
+         <flap0 start="0" end="1" lift="1.4" drag="1.5"/>
 
          <control-input axis="/controls/flight/elevator" control="FLAP0"/>
          <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
@@ -68,12 +70,13 @@
          <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>
   </hstab>
 
-  <vstab x="-7.985" y="0" z="-0.085"
-         length="3.598" 
-         chord="4.479" 
-         taper="0.60"
-         sweep="20">
-         <stall aoa="16" width="4" peak="1.5"/>
+  <vstab x="-11.838" y="4.099" z="0.321"
+         chord="5.327" 
+         length="2.6" 
+         taper="0.45"
+         sweep="24"
+         dihedral="105">
+         <stall aoa="12" width="1" peak="1.5"/>
          <flap0 start="0" end="1" lift="1.4" drag="1.1"/>
 
          <control-input axis="/controls/flight/rudder" control="FLAP0" invert="true"/>
@@ -82,25 +85,50 @@
          <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm"/>
   </vstab>
 
-<!-- 2 x Pratt & Whitney J-58 
-     poussée          : 10900 kg (24000 lb) 
-     postcombustion   : 14500 Kg (32000 lb)
-     Poid             :  3200 kg ( 7000 lb)
--->
-  <jet x="-6.191" y="1.718" z="-0.529"
-       mass="5000"
-       thrust="24000"
-       afterburner="32000">
-       <actionpt x="-8.122" y="1.718" z="-0.529"/>
+  <vstab x="-11.838" y="-4.099" z="0.321"
+         chord="5.327" 
+         length="2.6" 
+         taper="0.45"
+         sweep="24"
+         dihedral="75">
+         <stall aoa="12" width="4" peak="1.5"/>
+         <flap0 start="0" end="1" lift="1.4" drag="1.1"/>
+
+         <control-input axis="/controls/flight/rudder" control="FLAP0" invert="true"/>
+         <control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>
+
+         <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm"/>
+  </vstab>
+
+  <!-- 2  Pratt & Whitney J-58 
+
+       sources          : http://en.wikipedia.org/wiki/Pratt_%26_Whitney_J58
+
+       type             : afterburning variable cycle turbojet/ramjet
+       thrust           : 25000 lb 
+       afterburner      : 34000 lb
+       weight           : approx. 6000 lbs.
+  -->
+  <jet x="-6.191" y="4.118" z="-0.529"
+       mass="6000"
+       thrust="25000"
+       afterburner="34000"
+       tsfc="0.519"
+       epr="2.8"
+       spool-time="5">
+       <actionpt x="-14" y="4.118" z="-0.305"/>
        <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
        <control-input axis="/controls/engines/engine[0]/afterburner" control="REHEAT"/>
   </jet>
 
-  <jet x="-6.191" y="-1.718" z="-0.529"
-       mass="5000"
-       thrust="24000"
-       afterburner="32000">
-       <actionpt x="-8.122" y="-1.718" z="-0.529"/>
+  <jet x="-6.191" y="-4.118" z="-0.529"
+       mass="6000"
+       thrust="25000"
+       afterburner="34000"
+       tsfc="0.519"
+       epr="2.8"
+       spool-time="5">
+       <actionpt x="-14" y="-4.118" z="-0.305"/>
        <control-input axis="/controls/engines/engine[1]/throttle" control="THROTTLE"/>
        <control-input axis="/controls/engines/engine[1]/afterburner" control="REHEAT"/>
   </jet>
@@ -147,6 +175,6 @@
   <tank x="4.0" y="0.0" z="-0.15" capacity="7000" jet="true"/>
   <tank x="-1.0" y="0.0" z="-0.15" capacity="7000" jet="true"/>
   
-  <ballast x="1.0" y="0.0" z="0.0" mass="2000"/>
+  <ballast x="7" y="0" z="-5" mass="4000"/>
 
 </airplane>
