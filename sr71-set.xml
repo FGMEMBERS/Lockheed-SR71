@@ -1,11 +1,20 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="ISO-8859-1"?> 
 
 <!-- <PropertyList include="sr71-jsbsim-cnf.xml"> -->
 <PropertyList include="sr71-yasim-cnf.xml">
 
   <sim>
-  <description>Lockheed SR 71 Blackbird (YASim)</description>
-    <author>Emmanuel BARANGER (3D/FDM)</author>
+
+    <description>Lockheed SR 71 Blackbird (YASim)</description>
+    <author>Emmanuel BARANGER (3D/FDM), F-GTUX (FDM/Nasal)</author>
+
+    <rating>
+      <FDM type="int">     2 </FDM>
+      <systems type="int"> 1 </systems>
+      <cockpit type="int"> 1 </cockpit>
+      <model type="int">   4 </model>
+    </rating>
+
   </sim>
 
 </PropertyList>

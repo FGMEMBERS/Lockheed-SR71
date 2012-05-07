@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="ISO-8859-1"?> 
 
 <PropertyList>
 
@@ -7,7 +7,6 @@
   <animation>
     <object-name>panel</object-name>
   </animation>
-
 
   <model>
     <path>Aircraft/Lockheed-SR71/Models/Interior/Panel/Instruments/mag-compass/mag-compass.xml</path>
@@ -21,7 +20,7 @@
   <model>
     <path>Aircraft/Lockheed-SR71/Models/Interior/Panel/Instruments/hsi/hsi.xml</path>
     <offsets>
-      <x-m> -0.199 </x-m>
+      <x-m> -0.192</x-m>
       <y-m>  0.000 </y-m>
       <z-m>  0.257 </z-m>
     </offsets>

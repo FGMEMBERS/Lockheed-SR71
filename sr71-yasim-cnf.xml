@@ -1,9 +1,11 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="ISO-8859-1"?> 
 
 <PropertyList include="sr71-base.xml">
 
   <sim>
 
+    <description>Lockheed SR 71 Blackbird (YASim)</description>
+    <author>Emmanuel BARANGER (3D/FDM), F-GTUX (FDM/Nasal)</author>
     <flight-model>yasim</flight-model>
     <aero>sr71-yasim</aero>
 

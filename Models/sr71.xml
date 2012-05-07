@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?> 
 
 <PropertyList>
 
@@ -6,10 +6,24 @@
 
   <nasal>
     <load>
-      var livery_update = aircraft.livery_update.new("Aircraft/Lockheed-SR71/Models/Liveries", 10);
+       var livery_update = aircraft.livery_update.new("Aircraft/Lockheed-SR71/Models/Liveries", 10);
+
+      var self = cmdarg();
+
+      var float_0 = self.getNode("sim/multiplay/generic/float[0]", 1);
+      var float_1 = self.getNode("sim/multiplay/generic/float[1]", 1);
+      
+      var crew_door = self.getNode("instrumentation/doors/crew/position-norm", 1);
+      var passenger_door = self.getNode("instrumentation/doors/passenger/position-norm", 1);
+    
+      crew_door.alias(float_0);
+      passenger_door.alias(float_1);
     </load>
+
     <unload>
       livery_update.stop();
+      crew_door.unalias();
+      passenger_door.unalias();
     </unload>
   </nasal>
 
@@ -31,30 +45,31 @@
     <object-name>aileronD</object-name>
     <object-name>profondeurG</object-name>
     <object-name>profondeurD</object-name>
+    <object-name>porteAG</object-name>
+    <object-name>porteAD</object-name>
+    <object-name>porteAR</object-name>
+    <object-name>porteG1</object-name>
+    <object-name>porteG2</object-name>
+    <object-name>porteD1</object-name>
+    <object-name>porteD2</object-name>
+
     <object-name>roueA</object-name>
     <object-name>axeA</object-name>
     <object-name>verrinA</object-name>
     <object-name>barrehautA</object-name>
     <object-name>barrebasA</object-name>
-    <object-name>porteAG</object-name>
-    <object-name>porteAD</object-name>
-    <object-name>porteAR</object-name>
     <object-name>roueG</object-name>
     <object-name>axeG</object-name>
     <object-name>verrinG</object-name>
     <object-name>barrehautG</object-name>
     <object-name>barrebasG</object-name>
-    <object-name>porteG1</object-name>
     <object-name>accrocheG</object-name>
-    <object-name>porteG2</object-name>
     <object-name>roueD</object-name>
     <object-name>axeD</object-name>
     <object-name>verrinD</object-name>
     <object-name>barrehautD</object-name>
     <object-name>barrebasD</object-name>
-    <object-name>porteD1</object-name>
     <object-name>accrocheD</object-name>
-    <object-name>porteD2</object-name>
 
     <!-- Objets transparents -->
     <object-name>vitres</object-name>
@@ -80,30 +95,31 @@
     <object-name>aileronD</object-name>
     <object-name>profondeurG</object-name>
     <object-name>profondeurD</object-name>
+    <object-name>porteAG</object-name>
+    <object-name>porteAD</object-name>
+    <object-name>porteAR</object-name>
+    <object-name>porteG1</object-name>
+    <object-name>porteG2</object-name>
+    <object-name>porteD1</object-name>
+    <object-name>porteD2</object-name>
+
     <object-name>roueA</object-name>
     <object-name>axeA</object-name>
     <object-name>verrinA</object-name>
     <object-name>barrehautA</object-name>
     <object-name>barrebasA</object-name>
-    <object-name>porteAG</object-name>
-    <object-name>porteAD</object-name>
-    <object-name>porteAR</object-name>
     <object-name>roueG</object-name>
     <object-name>axeG</object-name>
     <object-name>verrinG</object-name>
     <object-name>barrehautG</object-name>
     <object-name>barrebasG</object-name>
-    <object-name>porteG1</object-name>
     <object-name>accrocheG</object-name>
-    <object-name>porteG2</object-name>
     <object-name>roueD</object-name>
     <object-name>axeD</object-name>
     <object-name>verrinD</object-name>
     <object-name>barrehautD</object-name>
     <object-name>barrebasD</object-name>
-    <object-name>porteD1</object-name>
     <object-name>accrocheD</object-name>
-    <object-name>porteD2</object-name>
 
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
@@ -157,6 +173,10 @@
     <object-name>aileronD</object-name>
     <object-name>profondeurG</object-name>
     <object-name>profondeurD</object-name>
+    <object-name>porteAG</object-name>
+    <object-name>porteAD</object-name>
+    <object-name>porteAR</object-name>
+    <object-name>porteG1</object-name>
     <object-name>porteG2</object-name>
     <object-name>porteD1</object-name>
     <object-name>porteD2</object-name>
@@ -177,14 +197,17 @@
     <object-name>parachute</object-name>
   </animation>
 
-  <!-- Planches de bord -->
+  <model>
+    <path>Aircraft/Lockheed-SR71/Models/shadow.xml</path>
+    <offsets>
+      <x-m>  0.285 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -2.700 </z-m>
+    </offsets>
+  </model>
+
   <model>
     <path>Aircraft/Lockheed-SR71/Models/Interior/interior.xml</path>
-    <offsets>
-      <x-m> 0 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0 </z-m>
-    </offsets>
   </model>
 
   <!-- Les flammes -->
@@ -211,27 +234,21 @@
   <!-- Particules OSG -->
   <!-- Gauche -->
   <model>
-    <path>Aircraft/Lockheed-SR71/Models/Effects/trailL.xml</path>
+    <path>Aircraft/Lockheed-SR71/Models/Effects/trail/trailL.xml</path>
     <offsets>
       <x-m> 15.387 </x-m>
       <y-m> -4.205 </y-m>
       <z-m> -0.305 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
   <!-- Droite -->
   <model>
-    <path>Aircraft/Lockheed-SR71/Models/Effects/trailR.xml</path>
+    <path>Aircraft/Lockheed-SR71/Models/Effects/trail/trailR.xml</path>
     <offsets>
       <x-m> 15.387 </x-m>
       <y-m>  4.205 </y-m>
       <z-m> -0.305 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -268,7 +285,7 @@
 
   <!-- Gauche -->
   <model>
-    <path>Aircraft/Lockheed-SR71/Models/Effects/smokeL.xml</path>
+    <path>Aircraft/Lockheed-SR71/Models/Effects/smoke/smokeL.xml</path>
     <offsets>
       <x-m> 15.387 </x-m>
       <y-m> -4.205 </y-m>
@@ -278,7 +295,7 @@
 
   <!-- Droite -->
   <model>
-    <path>Aircraft/Lockheed-SR71/Models/Effects/smokeR.xml</path>
+    <path>Aircraft/Lockheed-SR71/Models/Effects/smoke/smokeR.xml</path>
     <offsets>
       <x-m> 15.387 </x-m>
       <y-m>  4.205 </y-m>
@@ -288,7 +305,7 @@
 
   <!-- Gauche -->
   <model>
-    <path>Aircraft/Lockheed-SR71/Models/Effects/tiptrail.xml</path>
+    <path>Aircraft/Lockheed-SR71/Models/Effects/tiptrail/tiptrail.xml</path>
     <offsets>
       <x-m> 13.133 </x-m>
       <y-m> -8.460 </y-m>
@@ -298,7 +315,7 @@
 
   <!-- Droite -->
   <model>
-    <path>Aircraft/Lockheed-SR71/Models/Effects/tiptrail.xml</path>
+    <path>Aircraft/Lockheed-SR71/Models/Effects/tiptrail/tiptrail.xml</path>
     <offsets>
       <x-m> 13.133 </x-m>
       <y-m>  8.460 </y-m>
