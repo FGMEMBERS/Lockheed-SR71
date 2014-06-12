@@ -14,6 +14,15 @@
       <cockpit type="int"> 1 </cockpit>
       <model type="int">   4 </model>
     </rating>
+    
+    <tags>
+        <tag>lockheed</tag>
+        <tag>jet</tag>
+        <tag>twin-engine</tag>
+        <tag>retractable-gear</tag>
+        <tag>supersonic</tag>
+        <tag>coldwar</tag>
+    </tags>
 
   </sim>
 
