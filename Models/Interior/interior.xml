@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+
+<PropertyList>
+
+  <path>interior.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>interieur</object-name>
+    <object-name>manche</object-name>
+    <object-name>intcockpit</object-name>
+    <object-name>intcockpit2</object-name>
+
+    <!-- Le fauteuil -->
+    <object-name>CPT-Seat.003</object-name>
+    <object-name>CPT-Seat.004</object-name>
+    <object-name>box.003</object-name>
+    <object-name>box.004</object-name>
+    <object-name>box.005</object-name>
+    <object-name>sides.001</object-name>
+
+    <!-- Objets transparents -->
+    <object-name>intvitres</object-name>
+    <object-name>intvitre0</object-name>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>intvitres</object-name>
+    <object-name>intvitre0</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>intvitres</object-name>
+    <object-name>intvitre0</object-name>
+  </animation>
+
+  <!-- Pilote -->
+  <model>
+    <path>Aircraft/Lockheed-SR71/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -10.216 </x-m>
+      <y-m>   0.000 </y-m>
+      <z-m>  -0.687 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Planches de bord -->
+  <model>
+    <path>Aircraft/Lockheed-SR71/Models/Interior/Panel/panel.xml</path>
+    <offsets>
+      <x-m> -10.706 </x-m>
+      <y-m>   0.000 </y-m>
+      <z-m>  -0.768 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Canopy -->
+  <animation>
+    <name>IntCanopy</name>
+    <object-name>intcockpit</object-name>
+    <object-name>intvitre0</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>IntCanopy</object-name>
+    <property>instrumentation/doors/crew/position-norm</property>
+    <interpolation>
+      <entry><ind> 0.00 </ind><dep>  0 </dep></entry>
+      <entry><ind> 0.25 </ind><dep> 10 </dep></entry>
+      <entry><ind> 0.50 </ind><dep> 15 </dep></entry>
+      <entry><ind> 0.75 </ind><dep> 30 </dep></entry>
+      <entry><ind> 1.00 </ind><dep> 38 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -9.616 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.169 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y>  1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>
+
